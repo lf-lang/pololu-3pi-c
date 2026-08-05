@@ -1,0 +1,4 @@
+- TODO: This README should document what the package provides and how to use it, and what prerequisites are needed to use it.
+- TODO: We should include this repo as a submodule of [lf-3pi-template](https://github.com/lf-lang/lf-3pi-template) under a directory named `lf-packages`. 
+- TODO: Then, we need to make all `.lf` files in [lf-3pi-template](https://github.com/lf-lang/lf-3pi-template) use these packages in this repo.
+- TODO: As a final step, we need to remove the [lf-3pi-template/tree/main/src/lib](https://github.com/lf-lang/lf-3pi-template/tree/main/src/lib) directory.
