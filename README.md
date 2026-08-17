@@ -1,5 +1,5 @@
-# Lingua Franca Library for Pololu 3pi Robot 
-This library provides base reactors for interfacing with components of the [Pololu 3pi+ 2040 robot](https://www.pololu.com/docs/0J86), along with the C headers and utility routines used by the base reactors.
+# Library for Interaction with the Pololu 3pi Robot Components
+This library provides base reactors for interfacing with components of the [Pololu 3pi+ 2040 robot](https://www.pololu.com/docs/0J86), along with the C headers and utility routines used by the base reactors. This library is written in the C target of Lingua Franca.
 
 ## Prerequisites
 This library requires installing Raspberry Pi Pico SDK and `picotool`.
