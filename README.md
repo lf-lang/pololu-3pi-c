@@ -1,8 +1,8 @@
-# Library for Interaction with the Pololu 3pi Robot Components
-This library provides base reactors for interfacing with components of the [Pololu 3pi+ 2040 robot](https://www.pololu.com/docs/0J86), along with the C headers and utility routines used by the base reactors. This library is written in the C target of Lingua Franca.
+# Package Library for Interaction with the Pololu 3pi Robot Components
+This reactor package library provides base reactors for interfacing with components of the [Pololu 3pi+ 2040 robot](https://www.pololu.com/docs/0J86), along with the C headers and utility routines used by the base reactors. This library is written in the C target of Lingua Franca.
 
 ## Prerequisites
-This library requires installing Raspberry Pi Pico SDK and `picotool`.
+This library requires installing the Raspberry Pi Pico SDK and `picotool`.
 ### Install with `nix`
 Please follow the steps in https://www.lf-lang.org/embedded-lab/Prerequisites.html.
 
@@ -34,3 +34,6 @@ Then import the library reactors. For example:
 ```
 import Display from <pololu-3pi-c>
 ```
+
+## Usage Examples
+This package library is currently used by the [lf-3pi-template](https://github.com/lf-lang/lf-3pi-template) repository as the main template library for the [Embedded Systemd Labs](https://www.lf-lang.org/embedded-lab/index.html).
