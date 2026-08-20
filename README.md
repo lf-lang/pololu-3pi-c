@@ -18,6 +18,16 @@ Please follow the steps in https://www.lf-lang.org/embedded-lab/Non-Nix.html.
 * [Motors](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Motors.lf): Drives the left and right motors according to the power levels provided as inputs.
 * [MotorsWithFeedback](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/MotorsWithFeedback.lf): Wraps [Motors](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Motors.lf) with a proportional-integral (PI) feedback controller. It uses encoder measurements to adjust motor power so that the measured wheel speeds track the desired speeds.
 
+* [BumpAdjustable](/src/lib/BumpAdjustable.lf): Reads the left and right bump sensors with configurable calibration sample count and press/release thresholds, allowing bump detection behavior to be tuned for different operating conditions.
+
+* [BumpLogFields](/src/lib/BumpLogFields.lf): Provides logging to bump sensor data. It passes the bump sensor fields through without modifying their values, allowing applications to record bump events and sensor state while the data continues through the reactor network.
+
+* [EncoderLogFields](/src/lib/EncoderLogFields.lf): Provides logging to wheel encoder and motion-related data, including encoder counts, encoder deltas, traveled distance, and command values. It preserves the original values while exposing them for logging and analysis of robot movement.
+
+* [IMULogFields](/src/lib/IMULogFields.lf): Provides logging to  inertial measurement unit (IMU) and turn-control data. It exposes sensor and turn-target fields without changing their values, enabling applications to record orientation and turning behavior for later analysis.
+
+* [LineSensorLogFields](/src/lib/LineSensorLogFields.lf): Provides logging to line sensor measurements and selected line-tracking state. It preserves the original values while exposing them for logging, making it easier to analyze line detection and the robot's line-following behavior.
+
 ## To Use This Library
 Clone the repo into your `lf-packages` directory in the root of your project or into the directory pointed to by your `LF_PACKAGES` environment variable:
 
@@ -37,3 +47,5 @@ import Display from <pololu-3pi-c>
 
 ## Usage Examples
 This package library is currently used by the [lf-3pi-template](https://github.com/lf-lang/lf-3pi-template) repository as the main template library for the [Embedded Systemd Labs](https://www.lf-lang.org/embedded-lab/index.html).
+
+The reactor libraries for logging are used by the [cps-operational-sim](https://github.com/asu-kim/cps-operational-sim) repository for logging sensor and operational data in CPS simulations.
