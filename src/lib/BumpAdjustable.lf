@@ -7,6 +7,9 @@
  * applications to tune the bump sensor sensitivity for different operating
  * environments while producing left and right bump events.
  * 
+ * NOTE: The bump sensors cannot be used together with the line sensors. See <a
+ * href="https://www.pololu.com/docs/0J86/6.5">Section 6.5 of the Pololu 3pi+ 2040 User's Guide</a>.
+ *
  * Lower press_percent / release_percent = more sensitive.
  * Higher press_percent / release_percent = less sensitive.
  * Default Pololu behavior is approximately:
