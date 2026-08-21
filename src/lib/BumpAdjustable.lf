@@ -1,14 +1,19 @@
 /**
- * Adjustable bump sensor reactor for Pololu 3Pi+ 2040.
- *
+/**
+ * @brief Library reactor for the adjustable bump sensors on the
+ * <a href="https://www.pololu.com/docs/0J86">Pololu 3pi+ 2040 robot</a>.
+ * This reactor behaves similarly to the standard bump sensor reactor but
+ * allows the press and release thresholds to be configured. This enables
+ * applications to tune the bump sensor sensitivity for different operating
+ * environments while producing left and right bump events.
+ * 
  * Lower press_percent / release_percent = more sensitive.
  * Higher press_percent / release_percent = less sensitive.
- *
  * Default Pololu behavior is approximately:
  *   release threshold = 140%
  *   press threshold   = 160%
- *
  * This version lets the maze experiment use a more sensitive setting.
+ * @author Pawan Kumar
  */
 target C {
   platform: {

@@ -1,3 +1,11 @@
+/**
+ * @brief Library reactor for line sensor logging.
+ * This reactor receives the five line sensor readings together with the
+ * associated line-following state information and forwards them as
+ * standardized logging outputs.
+ *
+ * @author Pawan Kumar
+ */
 target C {
   platform: {
     name: "rp2040",

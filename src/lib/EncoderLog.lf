@@ -1,3 +1,13 @@
+/**
+ * @brief Library reactor for encoder logging.
+ * This reactor receives encoder measurements from a single wheel, including
+ * encoder position, incremental encoder motion, travelled distance, and motor
+ * command, and forwards them as standardized logging outputs. The same reactor
+ * can be instantiated for both the left and right wheel, allowing a common
+ * logging interface for differential-drive robots.
+ *
+ * @author Pawan Kumar
+ */
 target C {
   platform: {
     name: "rp2040",

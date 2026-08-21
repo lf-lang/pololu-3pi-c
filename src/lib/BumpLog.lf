@@ -1,3 +1,11 @@
+/**
+ * @brief Library reactor for bump sensor logging.
+ * This reactor receives the left and right bump sensor values and forwards
+ * them as standardized logging outputs. It provides a reusable interface for
+ * experiments that record bump events.
+ *
+ * @author Pawan Kumar
+ */
 target C {
   platform: {
     name: "rp2040",

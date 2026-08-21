@@ -1,3 +1,11 @@
+/**
+ * @brief Library reactor for logging gyroscope heading and turn target data.
+ * This reactor receives the current gyroscope-derived heading angle and the
+ * target heading angle used by the robot's turning logic, and forwards them
+ * as standardized logging outputs.
+ *
+ * @author Pawan Kumar
+ */
 target C {
   platform: {
     name: "rp2040",
