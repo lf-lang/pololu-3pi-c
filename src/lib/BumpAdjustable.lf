@@ -1,5 +1,4 @@
 /**
-/**
  * @brief Library reactor for the adjustable bump sensors on the
  * <a href="https://www.pololu.com/docs/0J86">Pololu 3pi+ 2040 robot</a>.
  * This reactor behaves similarly to the standard bump sensor reactor but
@@ -16,6 +15,8 @@
  *   release threshold = 140%
  *   press threshold   = 160%
  * This version lets the maze experiment use a more sensitive setting.
+ * @author Abhi Gundrala
+ * @author Edward A. Lee
  * @author Pawan Kumar
  */
 target C {

@@ -23,14 +23,6 @@ Please follow the steps in https://www.lf-lang.org/embedded-lab/Non-Nix.html.
 * [Motors](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Motors.lf): Drives the left and right motors according to the power levels provided as inputs.
 * [MotorsWithFeedback](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/MotorsWithFeedback.lf): Wraps [Motors](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Motors.lf) with a proportional-integral (PI) feedback controller. It uses encoder measurements to adjust motor power so that the measured wheel speeds track the desired speeds.
 
-
-
-
-
-
-
-
-
 ## To Use This Library
 Clone the repo into your `lf-packages` directory in the root of your project or into the directory pointed to by your `LF_PACKAGES` environment variable:
 
