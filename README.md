@@ -11,10 +11,15 @@ Please follow the steps in https://www.lf-lang.org/embedded-lab/Non-Nix.html.
 
 ## Library Reactors
 * [Bump](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Bump.lf): Periodically reads the bump sensors and outputs their states.
+* [BumpAdjustable](/src/lib/BumpAdjustable.lf): Reads the left and right bump sensors with configurable calibration sample count and press/release thresholds, allowing bump detection behavior to be tuned for different operating conditions.
+* [BumpLog](/src/lib/BumpLog.lf): Provides logging to bump sensor data. It passes the bump sensor fields through without modifying their values, allowing applications to record bump events and sensor state while the data continues through the reactor network.
 * [Display](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Display.lf): Receives strings and displays them on the LCD display.
 * [Encoder](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Encoder.lf): Reads the wheel encoders when triggered and outputs the measured angle in degrees.
+* [EncoderLog](/src/lib/EncoderLog.lf): Provides logging to wheel encoder and motion-related data, including encoder counts, encoder deltas, traveled distance, and command values. It preserves the original values while exposing them for logging and analysis of robot movement.
 * [Accelerometer, Gyro, and GyroAngle](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/IMU.lf): Read the IMU values when triggered and output the acceleration, angular velocity, and the robot's angle relative to its initial orientation, respectively.
-* [Line](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Line.lf): Reads the line sensors when triggered and outputs their values. By default, calibration is performed upon receiving the first trigger. **NOTE**: The line sensors cannot be used together with the bump sensors.
+* [IMULog](/src/lib/IMULog.lf): Provides logging for gyroscope heading and turn-target data. It receives the current gyroscope-derived heading angle and the target heading angle used by the robot's turning logic, and exposes them as standardized logging outputs without changing their values.
+* [Line](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Line.lf): Reads the line sensors when triggered and outputs their values. By default, calibration is performed upon receiving the first trigger. **NOTE**: Using the line sensors together with the bump sensors is generally impractical because they interfere with each other.
+* [LineSensorLog](/src/lib/LineSensorLog.lf): Provides logging to line sensor measurements and selected line-tracking state. It preserves the original values while exposing them for logging, making it easier to analyze line detection and the robot's line-following behavior.
 * [Motors](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Motors.lf): Drives the left and right motors according to the power levels provided as inputs.
 * [MotorsWithFeedback](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/MotorsWithFeedback.lf): Wraps [Motors](https://github.com/lf-lang/pololu-3pi-c/blob/main/src/lib/Motors.lf) with a proportional-integral (PI) feedback controller. It uses encoder measurements to adjust motor power so that the measured wheel speeds track the desired speeds.
 
@@ -37,3 +42,5 @@ import Display from <pololu-3pi-c>
 
 ## Usage Examples
 This package library is currently used by the [lf-3pi-template](https://github.com/lf-lang/lf-3pi-template) repository as the main template library for the [Embedded Systemd Labs](https://www.lf-lang.org/embedded-lab/index.html).
+
+The reactor libraries for logging are used by the [cps-operational-sim](https://github.com/asu-kim/cps-operational-sim) repository for logging sensor and operational data in CPS simulations.
