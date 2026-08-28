@@ -1,4 +1,4 @@
-# Package Library for Interaction with the Pololu 3pi Robot Components
+# Package Library for Interaction with the Pololu 3pi+ Robot Components
 This reactor package library provides base reactors for interfacing with components of the [Pololu 3pi+ 2040 robot](https://www.pololu.com/docs/0J86), along with the C headers and utility routines used by the base reactors. This library is written in the C target of Lingua Franca.
 
 ## Prerequisites
